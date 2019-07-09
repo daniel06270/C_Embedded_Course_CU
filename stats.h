@@ -1,21 +1,16 @@
 /******************************************************************************
- * Copyright (C) 2017 by Alex Fosdick - University of Colorado
- *
- * Redistribution, modification or use of this software in source or binary
- * forms is permitted as long as the files maintain this copyright. Users are 
- * permitted to modify this and use it to learn about the field of embedded
- * software. Alex Fosdick and the University of Colorado are not liable for any
- * misuse of this material. 
+ * Copyright (C) 2019 by Daniel Martinez
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * Stats.h 
+ * First assigment header file of the course Embedded Software 
  *
- * <Add Extended Description Here>
+ * Along this document the different functions required for this assigment are 
+ * programmed. 
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * Daniel Martinez Jimenez
+ * 2019/07/05
  *
  */
 #ifndef __STATS_H__
@@ -24,17 +19,103 @@
 /* Add Your Declarations and Function Comments here */ 
 
 /**
- * @brief <Add Brief Description of Function Here>
+ * FUNCTION: Print_statistics
  *
- * <Add Extended Description Here>
+ * A function that prints the statistics of an array including minimum, maximum, mean, and median.
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- *
- * @return <Add Return Informaiton here>
+ * INPUT PARAMETERS:
+ * char* array: Array which is going to be treated
+ * int length: Length of the array
+ * 
+ * RETURN PARAMETERS:
+ * NONE
  */
+void print_statistics(unsigned char *array, int length);
+
+/**
+ * FUNCTION: print_array
+ *
+ *  Given an array of data and a length, prints the array to the screen
+ *
+ * INPUT PARAMETERS:
+ * char* array: Array which is going to be treated
+ * int length: Length of the array
+ * 
+ * RETURN PARAMETERS:
+ * NONE
+*/
+void print_array(unsigned char *array, int length);
+
+/**
+ * FUNCTION: find_median
+ *
+ * Given an array of data and a length, returns the median value
+ *
+ * INPUT PARAMETERS:
+ * char* array: Array which is going to be treated
+ * int length: Length of the array
+ * 
+ * RETURN PARAMETERS:
+ * NONE
+*/
+unsigned char find_median(unsigned char *array, int length);
+
+/**
+ * FUNCTION: find_mean
+ *
+ * Given an array of data and a length, returns the mean
+ *
+ * INPUT PARAMETERS:
+ * char* array: Array which is going to be treated
+ * int length: Length of the array
+ * 
+ * RETURN PARAMETERS:
+ * NONE
+*/
+unsigned int find_mean(unsigned char *array, int length);
+
+/**
+ * FUNCTION: find_maximum
+ *
+ * Given an array of data and a length, returns the maximum
+ *
+ * INPUT PARAMETERS:
+ * char* array: Array which is going to be treated
+ * int length: Length of the array
+ * 
+ * RETURN PARAMETERS:
+ * NONE
+*/
+unsigned char find_maximum(unsigned char *array, int length);
+
+/**
+ * FUNCTION: find_minimum
+ *
+ * Given an array of data and a length, returns the minimum
+ *
+ * INPUT PARAMETERS:
+ * char* array: Array which is going to be treated
+ * int length: Length of the array
+ * 
+ * RETURN PARAMETERS:
+ * NONE
+*/
+unsigned char find_minimum(unsigned char *array, int length);
+
+/**
+ * FUNCTION: sort_array
+ *
+ * Given an array of data and a length, sorts the array from largest to smallest. (The zeroth Element should be the largest value, and the last element (n-1) should be the smallest value. )
+ *
+ * INPUT PARAMETERS:
+ * char* array: Array which is going to be treated
+ * int length: Length of the array
+ * 
+ * RETURN PARAMETERS:
+ * NONE
+*/
+void sort_array(unsigned char *array, int length);
+
 
 
 #endif /* __STATS_H__ */
